@@ -1,0 +1,52 @@
+# Generates the GitHub stats card and the contribution snake,
+# then saves them in the /profile folder of this repository.
+name: Update profile cards
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # every day at 03:17 UTC
+  workflow_dispatch: # manual "Run workflow" button
+  push:
+    branches: [main]
+    paths: [".github/workflows/profile-cards.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&hide_border=true&border_radius=16&bg_color=35,070F1E,112A52&title_color=22D3EE&icon_color=FF9F43&text_color=EAF2FF&ring_color=FFD166
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&hide_border=true&border_radius=16&bg_color=35,070F1E,112A52&title_color=22D3EE&text_color=EAF2FF
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile/snake-dark.svg?palette=github-dark&color_snake=#FF7A59&color_dots=#161B22,#0B3B5C,#0E6E91,#22B8CF,#7EE8FA
+            profile/snake-light.svg?palette=github-light&color_snake=#FF6B6B&color_dots=#EBEDF0,#BDEFF8,#6FD6EA,#1E9FC4,#0B5E8A
+
+      - name: Commit the generated images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/
+          git commit -m "chore: refresh profile cards" || exit 0
+          git push
