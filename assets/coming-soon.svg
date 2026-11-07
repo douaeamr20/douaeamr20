@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 26" width="129" height="26" role="img" aria-label="Coming soon">
+<defs><style>@font-face{font-family:'DA Mono';font-weight:600;src:url(data:font/woff2;base64,d09GMgABAAAAAANkABAAAAAABkQAAAMMAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbIBwqBmA/U1RBVDYAXBEICoUkhDQBNgIkAxQLFAAEIAVmByAMBxuoBFGUDsZigC8ObDr5QqPejWehGjloVizr4riKiUYKMfm96ht9Es//N0a778+sSjLH8ibELNEtWiUTIikRaXQOCbKFQlvx4df5/mFQXilkhXBWSG3ofwDYxv+nV5NdZ07Qz0FGTbxeLCqWKrcStCcupz+2LZC3NYSe9AHXblAX9UCNyWGGCbR5UZq/WKQDxNJtEuVRQYjKpj41QDAOKBFDIhi1ZEUuD+d7JHQ44gGCUTuOKcx2uTdcaCOPBPV6PddjYKlPNge3ducFqjkPFCOOPa66eRHw1ZpHbf/wgbafU7jG1U79xJoBEcMK84It9UFRQ4KXbzmTTInSRGUaBBQa5jWxp7vrYDLjFYPWXDIysbI7ghi0eMfRP6eOHNqzXShL5IhnCjXiuVmM4QdZBHTQRL7oEnpraxfV+ORFRAR0MZOfkcTPpmTzcV1PP4Le+PzH3Y9fNNp4l+q6QTXcprvvCW54+GDaBLlTJI9gAjNJgh+RDIwwE4fOLoqPLyuGY4YkyOPPihHkdfYxQwrQjZ3KyWMGGTe5oUqk9YZh3feEXsrH9HHDY8m68bIZFgkI5aGd+uNFI5Ttrl8l6m3l7WGsZ23P0+3qIUOuaabmCY5OTubxaaaubilm5nFOJdQEwAblBJsAk1DiYJ6QYoYGtlamKN/mtP9tR4jLmI5LH+YbTp+xXoRs97q/L74V9N8GXd573+xvY2YxJyJ1Ki0mLyPGlStzQmYE3+jO28D1QZ4VRD+rZmb7J68OOgx/+l6tCOlyTTGF+jTEpyTJVxjv5OQICcn/Iw0ywYnKAMignKAS6fPKNraKtisxdAZr8x9Dzf3OcKkgicgCPzsqMsXENaMyB0WV6g+DaYOu1np1lHSQeER+oJ1VTKYpEwhqr3++2X57TZ3+n2jtH/z6vjYFf+dnS84c/dVi/cagAuGfDOo5BtqxFgVx6jmu5tc9DdwxN0Aw4qQ2149L3Z4mfUSZxFeFcZPgFLrweaeN2vGQRBExcXwnEo1CFZoIcUwawZbDwrHRwFGqaieTX6L1fQ==) format('woff2');}.m{font-family:'DA Mono',Consolas,'SF Mono',Menlo,'DejaVu Sans Mono',monospace;font-weight:600}
+.ring{animation:r 2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes r{from{transform:scale(1);opacity:.8}to{transform:scale(3);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#FF9F43"/></linearGradient></defs>
+<rect x=".75" y=".75" width="127.1" height="24.5" rx="12.25" fill="#0B1A33" stroke="url(#b)" stroke-width="1.5"/>
+<circle class="ring" cx="14" cy="13" r="3.5" fill="#FF9F43"/>
+<circle cx="14" cy="13" r="3.5" fill="#FF9F43"/>
+<text x="25" y="17" class="m" font-size="11" letter-spacing="1.6" fill="#EAF2FF">COMING SOON</text>
+</svg>
